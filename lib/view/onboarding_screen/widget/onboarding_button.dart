@@ -5,8 +5,9 @@ import '../../../constant/colors.dart';
 
 class OnboardingButton extends StatelessWidget {
   final String text;
+  final VoidCallback onTap;
   const OnboardingButton({
-    super.key, required this.text,
+    super.key, required this.text, required this.onTap,
   });
 
   @override
@@ -23,7 +24,7 @@ class OnboardingButton extends StatelessWidget {
           ),
         ),
 
-        onPressed: () {},
+        onPressed: onTap,
         child: Center(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,

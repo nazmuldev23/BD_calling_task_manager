@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:task_manager/constant/colors.dart';
 import 'package:task_manager/constant/images.dart';
-import 'package:task_manager/view/onboarding_screen/onboarding_text/onboarding_text.dart';
+import 'package:task_manager/view/onboarding_screen/onboarding_2.dart';
 import 'package:task_manager/view/onboarding_screen/widget/description.dart';
 import 'package:task_manager/view/onboarding_screen/widget/heading.dart';
 import 'package:task_manager/view/onboarding_screen/widget/onboarding_button.dart';
 import 'package:task_manager/view/onboarding_screen/widget/skip_button.dart';
+
+import '../../constant/strings.dart';
 
 class Onboarding1 extends StatelessWidget {
   const Onboarding1({super.key});
@@ -67,7 +67,9 @@ class Onboarding1 extends StatelessWidget {
               ),
               SizedBox(height: 250),
               //button
-              OnboardingButton(text: "Next")
+              OnboardingButton(text: "Next", onTap: () {
+                Navigator.pushNamed(context, Onboarding2.name);
+              }),
             ],
           ),
         ),
@@ -75,4 +77,3 @@ class Onboarding1 extends StatelessWidget {
     );
   }
 }
-
