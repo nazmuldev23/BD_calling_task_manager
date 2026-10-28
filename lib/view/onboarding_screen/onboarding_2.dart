@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:task_manager/constant/colors.dart';
 import 'package:task_manager/constant/images.dart';
+import 'package:task_manager/view/onboarding_screen/onboarding_3.dart';
 import 'package:task_manager/view/onboarding_screen/widget/description.dart';
 import 'package:task_manager/view/onboarding_screen/widget/heading.dart';
 import 'package:task_manager/view/onboarding_screen/widget/onboarding_button.dart';
@@ -20,7 +21,9 @@ class Onboarding2 extends StatelessWidget {
       //app bar
       appBar: AppBar(
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon: Icon(Icons.arrow_back, color: Colors.black),
         ),
         actions: [SkipButton()],
@@ -66,7 +69,9 @@ class Onboarding2 extends StatelessWidget {
               ),
               SizedBox(height: 250),
               //button
-              OnboardingButton(text: "Next", onTap: (){})
+              OnboardingButton(text: "Next", onTap: (){
+                Navigator.pushNamed(context, Onboarding3.name);
+              })
             ],
           ),
         ),

@@ -29,7 +29,7 @@ class OnboardingButton extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Next', style: GoogleFonts.poppins(fontSize: 14,
+              Text(text, style: GoogleFonts.poppins(fontSize: 14,
                   color: Colors.white,
                   fontWeight: FontWeight.w600)),
               SizedBox(width: 5,),
