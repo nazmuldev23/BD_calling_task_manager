@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:task_manager/constant/colors.dart';
 import 'package:task_manager/constant/images.dart';
+import 'package:task_manager/view/auth_screens/login_screen.dart';
 import 'package:task_manager/view/onboarding_screen/widget/description.dart';
 import 'package:task_manager/view/onboarding_screen/widget/heading.dart';
 import 'package:task_manager/view/onboarding_screen/widget/onboarding_button.dart';
@@ -41,7 +42,7 @@ class Onboarding3 extends StatelessWidget {
               ),
               SizedBox(height: 50),
               //onboarding heading
-              Heading(title: OnboardingText.onboardingHeadingText3),
+              Heading(text: OnboardingText.onboardingHeadingText3),
               SizedBox(height: 10),
               //onboarding description
               Description(title: OnboardingText.onboardingDescriptionText3),
@@ -68,7 +69,9 @@ class Onboarding3 extends StatelessWidget {
               ),
               SizedBox(height: 250),
               //button
-              OnboardingButton(text: "Continue", onTap: (){})
+              OnboardingButton(text: "Continue", onTap: (){
+                Navigator.pushNamed(context, LoginScreen.name);
+              })
             ],
           ),
         ),

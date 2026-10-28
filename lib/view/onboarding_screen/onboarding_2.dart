@@ -42,7 +42,7 @@ class Onboarding2 extends StatelessWidget {
               ),
               SizedBox(height: 50),
               //onboarding heading
-              Heading(title: OnboardingText.onboardingHeadingText2),
+              Heading(text: OnboardingText.onboardingHeadingText2),
               SizedBox(height: 10),
               //onboarding description
               Description(title: OnboardingText.onboardingDescriptionText2),
