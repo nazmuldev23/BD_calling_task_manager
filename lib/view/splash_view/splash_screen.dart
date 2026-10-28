@@ -1,5 +1,6 @@
-
 import 'package:flutter/material.dart';
+import 'package:task_manager/constant/colors.dart';
+import 'package:task_manager/constant/images.dart';
 import 'package:task_manager/view/onboarding_screen/onboarding_1.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -16,25 +17,23 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
 
-    Future.delayed(const Duration(seconds: 2), () {
+    Future.delayed(const Duration(seconds: 5), () {
       if (!mounted) return;
 
       Navigator.pushReplacementNamed(context, Onboarding1.name);
-
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.backgroundColor,
       body: Center(
-        child: Image.asset(
-          'assets/images/logo.png',
-          height: 200,
-          width: 200,
-          fit: BoxFit.contain,
-        ),
+          child: Image.asset(
+              AppImages.logo,
+              height: 200,
+              width: 200,
+          )
       ),
     );
   }
