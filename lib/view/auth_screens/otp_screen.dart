@@ -7,6 +7,8 @@ import 'package:task_manager/view/auth_screens/widgets/otp_text_field.dart';
 import 'package:task_manager/view/auth_screens/widgets/text_field.dart';
 import 'package:task_manager/view/auth_screens/widgets/label_text.dart';
 
+import 'new_password_screen.dart';
+
 class OtpScreen extends StatefulWidget {
   const OtpScreen({super.key});
   static const String name = '/otp-screen';
@@ -36,7 +38,7 @@ class _OtpScreenState extends State<OtpScreen> {
                     child: SizedBox(
                       width: double.infinity,
                         child: AuthButton(
-                          text: 'Confirm', onTap: () {},)
+                          text: 'Confirm', onTap: () {Navigator.pushNamed(context, NewPasswordScreen.name);},)
                     )
                 )
                 ],

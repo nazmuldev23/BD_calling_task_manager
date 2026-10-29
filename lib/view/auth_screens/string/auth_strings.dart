@@ -11,6 +11,8 @@ class AuthText{
   static const String verifyDescription= "We'll send a verification code to this email to confirm your account.";
   static const String otpHeading = "6-digit code";
   static const String otpDescription = "Please enter the code we've sent to michelle.rivera@example.com";
+  static const String newPasswordHeading= "Set Your New Password";
+  static const String newPasswordDescription= "Create a secure password to protect your account and get started seamlessly!";
   // static const String  = "";
   // // static const String lastNameHint = "e.g. Cooper";
 

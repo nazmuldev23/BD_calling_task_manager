@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task_manager/view/auth_screens/login_screen.dart';
+import 'package:task_manager/view/auth_screens/new_password_screen.dart';
 import 'package:task_manager/view/auth_screens/otp_screen.dart';
 import 'package:task_manager/view/auth_screens/sign_up_screen.dart';
 import 'package:task_manager/view/auth_screens/verify_screen.dart';
@@ -51,6 +52,7 @@ class MyApp extends StatelessWidget {
         SignUpScreen.name: (context) => const SignUpScreen(),
         VerifyScreen.name: (context) => const VerifyScreen(),
         OtpScreen.name: (context) => const OtpScreen(),
+        NewPasswordScreen.name: (context) => const NewPasswordScreen(),
       },
     );
   }
