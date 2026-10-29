@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:task_manager/view/auth_screens/login_screen.dart';
 import 'package:task_manager/view/auth_screens/string/auth_strings.dart';
+import 'package:task_manager/view/auth_screens/verify_screen.dart';
 import 'package:task_manager/view/auth_screens/widgets/auth_button.dart';
 import 'package:task_manager/view/auth_screens/widgets/auth_description.dart';
 import 'package:task_manager/view/auth_screens/widgets/auth_heading.dart';
 import 'package:task_manager/view/auth_screens/widgets/divider.dart';
 import 'package:task_manager/view/auth_screens/widgets/password_text_field.dart';
-import 'package:task_manager/view/auth_screens/widgets/remeber_widget.dart';
+import 'package:task_manager/view/auth_screens/widgets/chack_box.dart';
 import 'package:task_manager/view/auth_screens/widgets/sign_up_button.dart';
 import 'package:task_manager/view/auth_screens/widgets/text_field.dart';
-import 'package:task_manager/view/auth_screens/widgets/textfield_heading.dart';
+import 'package:task_manager/view/auth_screens/widgets/label_text.dart';
 
 import '../../constant/small_text.dart';
 
@@ -36,19 +38,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 SizedBox(height: 50),
                 AuthHeading(text: AuthText.sinUpHeading),
                 AuthDescription(text: AuthText.sinUpDescription),
-                TextFieldHeading(text: 'First Name'),
+                LabelText(text: 'First Name'),
                 AuthTextField(hint: AuthText.fastNameHint),
-                TextFieldHeading(text: 'Last Name'),
+                LabelText(text: 'Last Name'),
                 AuthTextField(hint: AuthText.lastNameHint),
-                TextFieldHeading(text: 'Email Address'),
+                LabelText(text: 'Email Address'),
                 AuthTextField(hint: AuthText.emailHinText),
-                TextFieldHeading(text: 'Address'),
+                LabelText(text: 'Address'),
                 AuthTextField(hint: AuthText.addressHint),
-                TextFieldHeading(text: 'PassWord'),
+                LabelText(text: 'PassWord'),
                 PasswordTextField(),
-                TextFieldHeading(text: 'Confirm password'),
+                LabelText(text: 'Confirm password'),
                 PasswordTextField(),
-                RememberWidget(
+                ChackBox(
                   text: 'I agree to the Terms & Conditions and Privacy Policy.',
                 ),
                 OrDivider(),
@@ -58,14 +60,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   children: [
                     SmallText(text: 'Don’t have an account?'),
                     SizedBox(width: 4),
-                    SignUpButton(text: 'Log In'),
+                    SignUpButton(text: 'Log In',onTap: (){Navigator.pushNamed(context, LoginScreen.name);},),
                   ],
                 ),
                 Center(
                     child: SizedBox(
                       width: double.infinity,
                         child: AuthButton(
-                          text: 'Continue', onTap: () {},)
+                          text: 'Continue', onTap: () {
+                            Navigator.pushNamed(context, VerifyScreen.name);
+                        },)
                     )
                 )
               ],

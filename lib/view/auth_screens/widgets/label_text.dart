@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class TextFieldHeading extends StatelessWidget {
+class LabelText extends StatelessWidget {
    final String text;
 
-  const TextFieldHeading( {super.key, required this.text});
+  const LabelText( {super.key, required this.text});
 
   @override
   Widget build(BuildContext context) {

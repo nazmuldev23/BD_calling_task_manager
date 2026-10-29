@@ -17,7 +17,7 @@ class _AuthTextFieldState extends State<AuthTextField> {
       width: 358,
       height: 44,
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: const Color(0xFFF5FAF0),
         borderRadius: BorderRadius.circular(6),
         boxShadow: [
           BoxShadow(

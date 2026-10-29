@@ -4,18 +4,18 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../../constant/colors.dart';
 
-class RememberWidget extends StatefulWidget {
+class ChackBox extends StatefulWidget {
 
   final String text;
-  const RememberWidget({super.key, required this.text});
+  const ChackBox({super.key, required this.text});
 
   @override
-  State<RememberWidget> createState() =>
-      _RememberWidgetState();
+  State<ChackBox> createState() =>
+      _ChackBoxState();
 }
 
-class _RememberWidgetState
-    extends State<RememberWidget> {
+class _ChackBoxState
+    extends State<ChackBox> {
   bool isRememberPassword = false;
 
   @override

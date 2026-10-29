@@ -20,6 +20,7 @@ class Onboarding2 extends StatelessWidget {
       backgroundColor: Colors.white,
       //app bar
       appBar: AppBar(
+        backgroundColor: Colors.white,
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);

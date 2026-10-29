@@ -18,7 +18,7 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
       width: 358,
       height: 44,
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: const Color(0xFFF5FAF0),
         borderRadius: BorderRadius.circular(6),
         boxShadow: [
           BoxShadow(

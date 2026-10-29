@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task_manager/constant/small_text.dart';
+import 'package:task_manager/view/auth_screens/sign_up_screen.dart';
 import 'package:task_manager/view/auth_screens/string/auth_strings.dart';
 import 'package:task_manager/view/auth_screens/widgets/auth_button.dart';
 import 'package:task_manager/view/auth_screens/widgets/divider.dart';
@@ -7,9 +8,9 @@ import 'package:task_manager/view/auth_screens/widgets/text_field.dart';
 import 'package:task_manager/view/auth_screens/widgets/auth_description.dart';
 import 'package:task_manager/view/auth_screens/widgets/auth_heading.dart';
 import 'package:task_manager/view/auth_screens/widgets/password_text_field.dart';
-import 'package:task_manager/view/auth_screens/widgets/remeber_widget.dart';
+import 'package:task_manager/view/auth_screens/widgets/chack_box.dart';
 import 'package:task_manager/view/auth_screens/widgets/sign_up_button.dart';
-import 'package:task_manager/view/auth_screens/widgets/textfield_heading.dart';
+import 'package:task_manager/view/auth_screens/widgets/label_text.dart';
 
 
 class LoginScreen extends StatefulWidget {
@@ -30,36 +31,34 @@ class _LoginScreenState extends State<LoginScreen> {
           padding: const EdgeInsets.all(16),
           child: Center(
             child: Column(
+              spacing: 10,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(height: 200),
                 AuthHeading(text: AuthText.loginHeading),
-                SizedBox(height: 10),
                 AuthDescription(text: AuthText.loginDescription),
-                SizedBox(height: 10),
-                TextFieldHeading(text: 'Email Address'),
+                LabelText(text: 'Email Address'),
                 AuthTextField(hint: AuthText.emailHinText,),
-                TextFieldHeading(text: 'Password'),
+                LabelText(text: 'Password'),
                 PasswordTextField(),
-                RememberWidget(text: 'Remember me'),
-                SizedBox(height: 10),
+                ChackBox(text: 'Remember me'),
                 OrDivider(),
-                SizedBox(height: 10),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     SmallText(text: 'Don’t have an account?'),
                     SizedBox(width: 4),
-                    SignUpButton(text: 'Sign Up',)
+                    SignUpButton(text: 'Sign Up', onTap: (){Navigator.pushNamed(context, SignUpScreen.name);},)
                   ],
                 ),
-                SizedBox(height: 10),
                 Center(
                     child: SizedBox(
                       width: double.infinity,
                         child: AuthButton(
-                          text: 'Log In', onTap: () {},)))
+                          text: 'Log In', onTap: () {},)
+                    )
+                )
               ],
             ),
           ),
