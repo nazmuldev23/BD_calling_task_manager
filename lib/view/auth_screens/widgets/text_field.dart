@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:task_manager/view/auth_screens/string/auth_strings.dart';
 
-class EmailTextField extends StatefulWidget {
-  const EmailTextField({super.key});
+class AuthTextField extends StatefulWidget {
+  final String hint;
+  const AuthTextField({super.key, required this.hint});
 
   @override
-  State<EmailTextField> createState() => _EmailTextFieldState();
+  State<AuthTextField> createState() => _AuthTextFieldState();
 }
 
-class _EmailTextFieldState extends State<EmailTextField> {
+class _AuthTextFieldState extends State<AuthTextField> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -29,7 +30,7 @@ class _EmailTextFieldState extends State<EmailTextField> {
       ),
       child: TextField(
         decoration: InputDecoration(
-          hintText: AuthText.emailHinText,
+          hintText: widget.hint,
           hintStyle: GoogleFonts.poppins(
               fontSize: 16,
               color: Color(0xFF6B7280)

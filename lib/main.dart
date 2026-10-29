@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task_manager/view/auth_screens/login_screen.dart';
+import 'package:task_manager/view/auth_screens/sign_up_screen.dart';
 import 'package:task_manager/view/onboarding_screen/onboarding_1.dart';
 import 'package:task_manager/view/onboarding_screen/onboarding_2.dart';
 import 'package:task_manager/view/onboarding_screen/onboarding_3.dart';
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
         Onboarding2.name : (context) => const Onboarding2(),
         Onboarding3.name : (context) => const Onboarding3(),
         LoginScreen.name : (context) => const LoginScreen(),
+        SignUpScreen.name : (context) => const SignUpScreen(),
 
     },
     );

@@ -4,16 +4,18 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../../constant/colors.dart';
 
-class RememberPassword extends StatefulWidget {
-  const RememberPassword({super.key});
+class RememberWidget extends StatefulWidget {
+
+  final String text;
+  const RememberWidget({super.key, required this.text});
 
   @override
-  State<RememberPassword> createState() =>
-      _RememberPasswordState();
+  State<RememberWidget> createState() =>
+      _RememberWidgetState();
 }
 
-class _RememberPasswordState
-    extends State<RememberPassword> {
+class _RememberWidgetState
+    extends State<RememberWidget> {
   bool isRememberPassword = false;
 
   @override
@@ -41,8 +43,7 @@ class _RememberPasswordState
           ),
         ),
         const SizedBox(width: 8),
-         Text(
-          'Remember Password',
+         Text(widget.text,
           style: GoogleFonts.poppins(
             fontSize: 12,
             color: Color(0xFF344054),

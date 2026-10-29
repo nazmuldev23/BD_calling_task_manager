@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class LoginHeading extends StatelessWidget {
+class AuthHeading extends StatelessWidget {
    final String text;
 
-  const LoginHeading( {super.key, required this.text});
+  const AuthHeading( {super.key, required this.text});
 
   @override
   Widget build(BuildContext context) {

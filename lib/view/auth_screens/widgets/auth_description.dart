@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class LoginDescription extends StatelessWidget {
+class AuthDescription extends StatelessWidget {
    final String text;
 
-  const LoginDescription( {super.key, required this.text});
+  const AuthDescription( {super.key, required this.text});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
         width: 358,
-        height: 20,
         child: Text(
           textAlign: TextAlign.start,
           text,
