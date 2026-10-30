@@ -4,6 +4,7 @@ import 'package:task_manager/view/auth_screens/new_password_screen.dart';
 import 'package:task_manager/view/auth_screens/otp_screen.dart';
 import 'package:task_manager/view/auth_screens/sign_up_screen.dart';
 import 'package:task_manager/view/auth_screens/verify_screen.dart';
+import 'package:task_manager/view/main_screen/main_screen.dart';
 import 'package:task_manager/view/onboarding_screen/onboarding_1.dart';
 import 'package:task_manager/view/onboarding_screen/onboarding_2.dart';
 import 'package:task_manager/view/onboarding_screen/onboarding_3.dart';
@@ -53,6 +54,7 @@ class MyApp extends StatelessWidget {
         VerifyScreen.name: (context) => const VerifyScreen(),
         OtpScreen.name: (context) => const OtpScreen(),
         NewPasswordScreen.name: (context) => const NewPasswordScreen(),
+        MainScreen.name: (context) => const MainScreen(),
       },
     );
   }

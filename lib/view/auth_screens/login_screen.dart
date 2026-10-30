@@ -12,6 +12,7 @@ import 'package:task_manager/view/auth_screens/widgets/chack_box.dart';
 import 'package:task_manager/view/auth_screens/widgets/sign_up_button.dart';
 import 'package:task_manager/view/auth_screens/widgets/label_text.dart';
 
+import '../main_screen/main_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -38,7 +39,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 AuthHeading(text: AuthText.loginHeading),
                 AuthDescription(text: AuthText.loginDescription),
                 LabelText(text: 'Email Address'),
-                AuthTextField(hint: AuthText.emailHinText,),
+                AuthTextField(hint: AuthText.emailHinText),
                 LabelText(text: 'Password'),
                 PasswordTextField(),
                 ChackBox(text: 'Remember me'),
@@ -49,16 +50,29 @@ class _LoginScreenState extends State<LoginScreen> {
                   children: [
                     SmallText(text: 'Don’t have an account?'),
                     SizedBox(width: 4),
-                    SignUpButton(text: 'Sign Up', onTap: (){Navigator.pushNamed(context, SignUpScreen.name);},)
+                    SignUpButton(
+                      text: 'Sign Up',
+                      onTap: () {
+                        Navigator.pushNamed(context, SignUpScreen.name);
+                      },
+                    ),
                   ],
                 ),
                 Center(
-                    child: SizedBox(
-                      width: double.infinity,
-                        child: AuthButton(
-                          text: 'Log In', onTap: () {},)
-                    )
-                )
+                  child: SizedBox(
+                    width: double.infinity,
+                    child: AuthButton(
+                      text: 'Log In',
+                      onTap: () {
+                        Navigator.pushNamedAndRemoveUntil(
+                          context,
+                          MainScreen.name,
+                          (route) => false,
+                        );
+                      },
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
