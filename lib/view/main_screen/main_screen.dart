@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../bottom_nav_bar/custom_bottom_nav_bar.dart';
+import '../home/screens/home_screen.dart';
 
 class MainScreen extends StatefulWidget {
   static const String name = '/main-screen';
@@ -14,7 +15,8 @@ class _MainScreenState extends State<MainScreen> {
   int currentIndex = 0;
 
   final List<Widget> screens = [
-    //screens
+    HomeScreen(),
+
   ];
 
   @override
