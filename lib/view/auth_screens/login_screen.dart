@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:task_manager/constant/small_text.dart';
+import 'package:task_manager/constant/text.dart';
 import 'package:task_manager/view/auth_screens/sign_up_screen.dart';
 import 'package:task_manager/view/auth_screens/string/auth_strings.dart';
 import 'package:task_manager/view/auth_screens/widgets/auth_button.dart';
@@ -48,7 +48,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.max,
                   children: [
-                    SmallText(text: 'Don’t have an account?'),
+                    DescriptionText(text: 'Don’t have an account?'),
                     SizedBox(width: 4),
                     SignUpButton(
                       text: 'Sign Up',

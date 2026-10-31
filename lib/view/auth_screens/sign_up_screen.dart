@@ -12,7 +12,7 @@ import 'package:task_manager/view/auth_screens/widgets/sign_up_button.dart';
 import 'package:task_manager/view/auth_screens/widgets/text_field.dart';
 import 'package:task_manager/view/auth_screens/widgets/label_text.dart';
 
-import '../../constant/small_text.dart';
+import '../../constant/text.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -58,7 +58,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.max,
                   children: [
-                    SmallText(text: 'Don’t have an account?'),
+                    DescriptionText(text: 'Don’t have an account?'),
                     SizedBox(width: 4),
                     SignUpButton(text: 'Log In',onTap: (){Navigator.pushNamed(context, LoginScreen.name);},),
                   ],
